@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { Navigation, Footer, Home, About, Contact, EditProfile } from "./components";
+import { Navigation, Footer, Home, About, Contact, EditProfile, Posts } from "./components";
 
 function App() {
   return (
@@ -12,8 +12,8 @@ function App() {
           <Route path="/about" exact component={() => <About />} />
           <Route path="/contact" exact component={() => <Contact />} />
           <Route path="/editprofile" exact component={() => <EditProfile />} />
+          <Route path="/Posts" exact component={() => <Posts />} />
         </Switch>
-        <Footer />
       </Router>
     </div>
   );

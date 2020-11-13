@@ -18,18 +18,23 @@ function EditProfile() {
 
     return (
       <form>
+        <div style={{ marginTop: 5, marginLeft: 200, padding: 30 }}>
         <h2>Profile</h2>
 
         <div className="container">
           <div>
               <label>First Name*: </label>
-              <input value={values.firstName} onChange={set('firstName')} />
+              <input 
+              type = "text" required
+              value={values.firstName} onChange={set('firstName')} />
           </div>
 
           { "       " }
           <div> 
               <label>Last Name*:</label>
-              <input value={values.lastName} onChange={set('lastName')} />
+              <input 
+              type = "text" required
+              value={values.lastName} onChange={set('lastName')} />
           </div>
 
         </div>
@@ -39,7 +44,10 @@ function EditProfile() {
         <div className="container">
           <div> 
             <label>Major*: </label>
-            <input value={values.major} onChange={set('major')} />
+            
+            <input 
+            type = "text" required
+            value={values.major} onChange={set('major')} />
             </div>
 
           { "         " }
@@ -55,7 +63,9 @@ function EditProfile() {
 
           <div> 
             <label>Gender*:</label>
-              <select value={values.gender} onChange={set('gender')}>
+              <select 
+                required
+                value={values.gender} onChange={set('gender')}>
                 <option value="">Select gender...</option>
                 {GENDERS.map(c => <option key={c}>{c}</option>)}
               </select>
@@ -63,13 +73,15 @@ function EditProfile() {
 
           <div> 
             <label>Ethnicity*:</label>
-              <select value={values.race} onChange={set('race')}>
+              <select 
+                required
+                value={values.race} onChange={set('race')}>
                 <option value="">Select gender...</option>
                 {RACES.map(c => <option key={c}>{c}</option>)}
               </select>
           </div>
         </div>
-        
+
         <br></br>
         <br></br>
 
@@ -83,8 +95,9 @@ function EditProfile() {
         <br></br>
         <button type="submit">Submit</button>
         </div>
-
+        </div>
       </form>
+      
     );
   }
 
