@@ -9,10 +9,7 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Avatar from "@material-ui/core/Avatar";
 
-
-
 const profiles = [
-
     {
      name: "Brandon Bauer",
      major: "Computer Science & Engineering",
@@ -45,7 +42,6 @@ const profiles = [
      image: "https://bit.ly/2WNi2Ml"
     }
 ]
-
 
 function Posts(props) {
   return (
@@ -89,13 +85,14 @@ function Posts(props) {
               
               <CardActions>
                 <Button size="small" color="primary">
-                  Share Profile
+                  Email Profile
                 </Button>
               </CardActions>
             </Card>
             <br></br>
           </Grid>
         ))}
+        <br></br>
       </Grid>
     </div>
   );
